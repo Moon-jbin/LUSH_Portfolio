@@ -1,0 +1,743 @@
+@charset "UTF-8";
+@import url(../indexHtmlCss/reset.css);
+@import url(../indexHtmlCss/header.css);
+@import url(../indexHtmlCss/popup.css);
+
+
+ul#skip {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+ul#skip li {
+  width: 100%;
+}
+ul#skip li a {
+  display: block;
+  width: 100%;
+  color: #fff;
+  background: #000;
+  text-align: center;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+}
+ul#skip li a:focus {
+  font-size: 20px;
+  height: 50px;
+  line-height: 50px;
+}
+
+
+/* 정보입력 css */
+#wrap {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+#wrap #main {
+width: 100%;
+position: relative;
+z-index: 2;
+}
+#wrap #main .container {
+width: 1195px;
+/* max-width: :1080px;  반응형 할것임 일단 이렇게 두자. */
+/* height: 650px; */
+height: auto;
+margin: 0 auto;
+padding: 70px;
+}
+
+#wrap #main .container .step-top {
+width: 100%;
+text-align: center;
+padding: 20px 0 0;
+overflow: hidden;
+}
+
+#wrap #main .container .step-top > h2 {
+font-size: 42px;
+color:#000;
+font-weight: 900;
+}
+/* 정보입력 단계 css */
+#wrap #main .container .step-top .step-wrap {
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+}
+#wrap #main .container .step-top .step-wrap > li {
+  display: inline-block;
+  padding: 0 18px 0 0;
+  height: 20px;
+}
+#wrap #main .container .step-top .step-wrap > li > span {
+  color: #a9a9a9;
+  font-size: 16px;
+  font-weight: 600;
+}
+#wrap #main .container .step-top .step-wrap > li:nth-child(2) > span {
+  color: #333;
+}
+
+#wrap #main .container .step-top .step-wrap > li > img {
+  padding: 0 0 0 18px;
+}
+
+
+
+/* basic-info css */
+#wrap #main .container .basic-info{
+  width: 100%;
+}
+
+#wrap #main .container .basic-info .title {
+  width: 100%;
+  border-bottom: 1px solid #000;
+  padding: 0 0 15px 0;
+  margin: 50px 0 30px;
+  display: flex;
+}
+#wrap #main .container .basic-info .title h3 {
+  font-size: 28px;
+}
+#wrap #main .container .basic-info .title p {
+  background: url(../../img/blet_squrered.png) no-repeat left 5px;
+  margin: 17px 0 auto auto;
+  font-size: 14px;
+  color:#333;
+  padding:0 0 0 12px;
+}
+
+/* 기본정보 폼태그 */
+#wrap #main .container .basic-info form {
+  width: 100%;
+}
+#wrap #main .container .basic-info form table {
+  width: 100%;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 0 0 30px;
+}
+#wrap #main .container .basic-info form table th {
+  width: 155px;
+  height: 40px;
+  line-height:40px;
+  text-align: left;
+  padding: 10px 0 10px 23px;
+  font-size: 14px;
+  color:#333;
+}
+#wrap #main .container .basic-info form table th.blet{
+  background: url(../../img/blet_squrered.png) no-repeat 8px 29px;
+}
+
+/* 주소 */
+#wrap #main .container .basic-info form table th.address{
+  vertical-align: top;
+}
+
+
+#wrap #main .container .basic-info form table td input {
+  border: 1px solid #ccc;
+  height: 38px;
+  outline: none;
+  padding: 0 10px 0 10px;
+  line-height: 38px;
+  color:#333;
+  font-size: 14px;
+}
+
+#wrap #main .container .basic-info form table td input#id,
+#wrap #main .container .basic-info form table td input#pwd,
+#wrap #main .container .basic-info form table td input#pwd-chk,
+#wrap #main .container .basic-info form table td input#name,
+#wrap #main .container .basic-info form table td input#nickName,
+#wrap #main .container .basic-info form table td input#phone-number{
+  width: 380px;
+}
+#wrap #main .container .basic-info form table td input#email,
+#wrap #main .container .basic-info form table td input#address {
+  width: 250px;
+}
+
+/* 이메일 폼 css */
+#wrap #main .container .basic-info form table td input#email {
+  display: inline-block;
+}
+
+#wrap #main .container .basic-info form table td.email-wrap .email-enter {
+  display: inline-block;
+  width: 120px;
+  height: 38px;
+  line-height: 35px;
+  border: 1px solid #ccc;
+  padding: 0 8px;
+  margin:  0px auto auto 7px;
+  background: url(../../img/select-arrow-down-11x7.png) no-repeat 100px;
+  cursor: pointer;
+  position: relative;
+  /* background-color: #333; */
+  
+}
+#wrap #main .container .basic-info form table td.email-wrap .email-enter.arrow-up{
+  background: url(../../img/select-arrow-up-11x7.png) no-repeat 100px;
+}
+#wrap #main .container .basic-info form table td.email-wrap .email-enter >span {
+  font-size: 14px;
+  color: #333;
+}
+#wrap #main .container .basic-info form table td.email-wrap .email-enter > ul {
+  width: 120px;
+  border: 1px solid #ccc;
+  border-top: 0;
+  line-height: 25px;
+  background-color: #fff;
+  position: absolute;
+  left: -1px;
+  padding: 5px 0;
+  display: none;
+}
+#wrap #main .container .basic-info form table td.email-wrap .email-enter > ul > li {
+  padding: 5px 6px;
+  height: 25px;
+  line-height: 15px;
+}
+#wrap #main .container .basic-info form table td.email-wrap .email-enter > ul > li:hover {
+  background: rgb(236, 236, 236);
+}
+
+
+/* 주소 폼 부분 */
+#wrap #main .container .basic-info form table td.address-wrap {
+  display: flex;
+  width: 850px;
+  flex-flow: wrap;
+}
+
+#wrap #main .container .basic-info form table td.address-wrap input#address {
+  margin: 12px 0 0 0;
+  cursor: text;
+}
+#wrap #main .container .basic-info form table td.address-wrap .post-search {
+  width: 120px;
+  height: 38px;
+  line-height: 35px;
+  border: 1px solid #000;
+  margin:  12px auto auto 10px;
+  text-align: center;
+}
+#wrap #main .container .basic-info form table td.address-wrap .post-search > a {
+  display: block;
+  font-size: 13px;
+  color:#000;
+  font-weight: 500;
+}
+#wrap #main .container .basic-info form table td.address-wrap .detailed-Address{
+  width: 850px;
+  margin: 7px 0 0 ;
+}
+
+#wrap #main .container .basic-info form table td.address-wrap .detailed-Address > input {
+  width: 420px;
+}
+
+#wrap #main .container .basic-info form table td.address-wrap .detailed-Address > input:first-child {
+  cursor: text;
+}
+#wrap #main .container .basic-info form table tr th {
+  vertical-align: top;
+}
+
+/* 아이디 최소 4 이상입력 css*/
+#wrap #main .container .basic-info form table td.id-wrap.error {
+  padding: 10px 0 0 0;
+  vertical-align: middle;
+}
+#wrap #main .container .basic-info form table td.id-wrap #id.error{
+  border:2px solid rgb(204, 32, 32);
+}
+#wrap #main .container .basic-info form table td.id-wrap > div.id-error-ms {
+  width: 100%;
+  display: none;
+}
+#wrap #main .container .basic-info form table td.id-wrap > div.id-error-ms > span{
+  color:#000;
+}
+
+/* 중복된 아이디 css */
+#wrap #main .container .basic-info form table td.id-wrap.over-error {
+  padding: 10px 0 0 0;
+  vertical-align: middle;
+}
+#wrap #main .container .basic-info form table td.id-wrap #id.over-error{
+  border:2px solid rgb(204, 32, 32);
+}
+#wrap #main .container .basic-info form table td.id-wrap > div.id-over-error-ms {
+  width: 100%;
+  display: none;
+}
+#wrap #main .container .basic-info form table td.id-wrap > div.id-over-error-ms > span{
+  color:#000;
+}
+/* 사용가능한 아이디입니다. css */
+#wrap #main .container .basic-info form table td.id-wrap.id-use-ms {
+  padding: 10px 0 0 0;
+  vertical-align: bottom;
+}
+#wrap #main .container .basic-info form table td.id-wrap #id.id-use-ms{
+  border:2px solid #14b13c;
+}
+#wrap #main .container .basic-info form table td.id-wrap > div.id-useable {
+  width: 100%;
+  display: none;
+}
+#wrap #main .container .basic-info form table td.id-wrap > div.id-useable > span{
+  color:#14b13c;
+}
+
+
+
+/* 비밀번호 최소 8자 이상 입력 css */
+#wrap #main .container .basic-info form table td.pwd-wrap.error {
+  padding: 10px 0 0 0;
+  vertical-align: middle;
+}
+#wrap #main .container .basic-info form table td.pwd-wrap #pwd.error{
+  border:2px solid rgb(204, 32, 32);
+}
+#wrap #main .container .basic-info form table td.pwd-wrap > div.pwd-error-ms {
+  width: 100%;
+  display: none;
+}
+#wrap #main .container .basic-info form table td.pwd-wrap > div.pwd-error-ms > span{
+  color:#000;
+}
+#wrap #main .container .basic-info form table td.pwd-wrap > div.pwd-error-ms > span > strong {
+  color: rgb(204, 32, 32);
+  font-family: normal;
+}
+/* 아이디와 비밀번호를 똑같이 사용할수 없다. css */
+#wrap #main .container .basic-info form table td.pwd-wrap.pwdId-overLab-error {
+  padding: 10px 0 0 0;
+  vertical-align: middle;
+}
+#wrap #main .container .basic-info form table td.pwd-wrap #pwd.pwdId-overLab-error{
+  border:2px solid rgb(204, 32, 32);
+}
+#wrap #main .container .basic-info form table td.pwd-wrap > div.pwdId-overLab-error-ms {
+  width: 100%;
+  display: none;
+}
+#wrap #main .container .basic-info form table td.pwd-wrap > div.pwdId-overLab-error-ms > span{
+  color:#000;
+}
+/* 사용가능한 비밀번호 입니다. */
+#wrap #main .container .basic-info form table td.pwd-wrap.pwd-use-ms {
+  padding: 10px 0 0 0;
+  vertical-align: middle;
+}
+#wrap #main .container .basic-info form table td.pwd-wrap #pwd.pwd-use-ms{
+  border:2px solid #14b13c;
+}
+#wrap #main .container .basic-info form table td.pwd-wrap > div.pwd-useable {
+  width: 100%;
+  display: none;
+}
+#wrap #main .container .basic-info form table td.pwd-wrap > div.pwd-useable > span{
+  color:#14b13c;
+}
+
+
+
+
+
+
+/* 비밀번호 확인 : 비밀번호가 다릅니다 css */
+#wrap #main .container .basic-info form table td.pwd-chk-wrap.error {
+  padding: 10px 0 0 0;
+}
+#wrap #main .container .basic-info form table td.pwd-chk-wrap #pwd-chk.error{
+  border:2px solid rgb(204, 32, 32);
+}
+#wrap #main .container .basic-info form table td.pwd-chk-wrap > div.pwd-chk-error-ms {
+  width: 100%;
+  display: none;
+}
+#wrap #main .container .basic-info form table td.pwd-chk-wrap > div.pwd-chk-error-ms > span{
+  color:#000;
+}
+/* 비밀번호 확인 : 비밀번호가 일치합니다. css */
+#wrap #main .container .basic-info form table td.pwd-chk-wrap.pwd-chk-use {
+  padding: 10px 0 0 0;
+}
+#wrap #main .container .basic-info form table td.pwd-chk-wrap #pwd-chk.pwd-chk-use{
+  border:2px solid #14b13c;
+}
+#wrap #main .container .basic-info form table td.pwd-chk-wrap > div.pwd-chk-useable {
+  width: 100%;
+  display: none;
+}
+#wrap #main .container .basic-info form table td.pwd-chk-wrap > div.pwd-chk-useable > span{
+  color:#14b13c;
+}
+
+/* 이름 : 이름은 2~10자리 까지 입력해주세요. */
+#wrap #main .container .basic-info form table td.name-wrap.error {
+  padding: 10px 0 0 0;
+}
+#wrap #main .container .basic-info form table td.name-wrap #name.error{
+  border:2px solid rgb(204, 32, 32);
+}
+#wrap #main .container .basic-info form table td.name-wrap > div.name-error-ms {
+  width: 100%;
+  display: none;
+}
+#wrap #main .container .basic-info form table td.name-wrap > div.name-error-ms > span{
+  color:#000;
+}
+/* 이름 : 사용가능한 이름입니다. */
+#wrap #main .container .basic-info form table td.name-wrap.name-use {
+  padding: 10px 0 0 0;
+  vertical-align: middle;
+}
+#wrap #main .container .basic-info form table td.name-wrap #name.name-use{
+  border:2px solid #14b13c;
+}
+#wrap #main .container .basic-info form table td.name-wrap > div.name-useable {
+  width: 100%;
+  display: none;
+}
+#wrap #main .container .basic-info form table td.name-wrap > div.name-useable > span{
+  color:#14b13c;
+}
+
+
+/* 이메일 : 이메일을 입력해주세요 css */
+#wrap #main .container .basic-info form table td.email-wrap.error {
+  padding: 10px 0 0 0;
+  vertical-align: middle;
+}
+#wrap #main .container .basic-info form table td.email-wrap #email.error{
+  border:2px solid rgb(204, 32, 32);
+}
+#wrap #main .container .basic-info form table td.email-wrap > div.email-error-ms {
+  width: 100%;
+  display: none;
+}
+#wrap #main .container .basic-info form table td.email-wrap > div.email-error-ms > span{
+  color:#000;
+}
+/* 이메일 : 사용가능한 이메일입니다. css */
+#wrap #main .container .basic-info form table td.email-wrap.email-use {
+  padding: 10px 0 0 0;
+  vertical-align: middle;
+}
+#wrap #main .container .basic-info form table td.email-wrap #email.email-use{
+  border:2px solid #14b13c;
+}
+#wrap #main .container .basic-info form table td.email-wrap > div.email-useable {
+  width: 100%;
+  display: none;
+}
+#wrap #main .container .basic-info form table td.email-wrap > div.email-useable > span{
+  color:#14b13c;
+}
+/* 이메일: 사용불가능한 이메일입니다. css */
+#wrap #main .container .basic-info form table td.email-wrap.email-non-use {
+  padding: 10px 0 0 0;
+  vertical-align: middle;
+}
+#wrap #main .container .basic-info form table td.email-wrap #email.email-non-use{
+  border:2px solid rgb(204, 32, 32);
+}
+#wrap #main .container .basic-info form table td.email-wrap > div.email-non-useable {
+  width: 100%;
+  display: none;
+}
+#wrap #main .container .basic-info form table td.email-wrap > div.email-non-useable > span{
+  color:rgb(204, 32, 32);
+}
+
+/* 휴대폰번호: 휴대폰번호를 입력해주세요 */
+#wrap #main .container .basic-info form table td.phone-number-wrap.error {
+  padding: 10px 0 0 0;
+  vertical-align: middle;
+}
+#wrap #main .container .basic-info form table td.phone-number-wrap #phone-number.error{
+  border:2px solid rgb(204, 32, 32);
+}
+#wrap #main .container .basic-info form table td.phone-number-wrap > div.phone-number-error-ms {
+  width: 100%;
+  display: none;
+}
+#wrap #main .container .basic-info form table td.phone-number-wrap > div.phone-number-error-ms > span{
+  color:#000;
+}
+/* 휴대폰번호: 특수기호를 제거하세요. */
+#wrap #main .container .basic-info form table td.phone-number-wrap.error-ms {
+  padding: 10px 0 0 0;
+}
+#wrap #main .container .basic-info form table td.phone-number-wrap #phone-number.error-ms{
+  border:2px solid rgb(204, 32, 32);
+}
+#wrap #main .container .basic-info form table td.phone-number-wrap > div.phone-error-ms {
+  width: 100%;
+  display: none;
+}
+#wrap #main .container .basic-info form table td.phone-number-wrap > div.phone-error-ms > span{
+  color:#000;
+}
+
+
+
+
+/* 회원가입 버튼 */
+#wrap #main .container .basic-info form .join-btn-wrap {
+  width: 100%;
+  text-align: center;
+  margin: 40px 0 0 0;
+}
+#wrap #main .container .basic-info form .join-btn-wrap > button {
+  width: 280px;
+  height: 63px;
+  background: #000;
+  color:#fff;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 푸터 */
+#wrap #footer {
+  display: block;
+  position: relative;
+  width: 100%;
+  min-width: 1180px;
+  margin: 0 auto;
+  padding: 0 0 55px;
+  background: #000;
+  z-index: 1;
+}
+#wrap #footer .f-icons {
+  width: 100%;
+  background: #f2f2f2;
+}
+
+#wrap #footer .f-icons .f-icons-gap {
+  width: 100%;
+  max-width: 1236px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+#wrap #footer .f-icons .f-icons-gap .f-icon {
+  text-align: center;
+}
+
+#wrap #footer .footer {
+  width: 100%;
+  max-width: 1180px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 45px 0 0;
+}
+
+#wrap #footer .footer .servicewrap {
+  width: 100%;
+  height: 330px;
+  margin: 0 0 20px;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_left {
+  width: 300px;
+  height: 330px;
+  padding: 0 0 0 100px;
+  float: left;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_left .f_logo {
+  width: 200px;
+  height: 22px;
+}
+#wrap #footer .footer .servicewrap .subinfo_left .f_logo a {
+  display: block;
+  width: 200px;
+  height: 22px;
+  background: url(../../img/8b07b23fdab3e3e461a6acc42bc930c3_43812.png)
+    no-repeat 0 50%;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_left .call-center {
+  padding: 55px 0 0;
+}
+#wrap #footer .footer .servicewrap .subinfo_left .call-center .call-number {
+  width: 200px;
+  font-size: 16px;
+  color: #fff;
+}
+#wrap #footer .footer .servicewrap .subinfo_left .call-center .email {
+  width: 200px;
+  padding: 4px 0 2px;
+}
+#wrap #footer .footer .servicewrap .subinfo_left .call-center .email button {
+  background: #000;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  font-size: 14px;
+  line-height: 22px;
+}
+#wrap #footer .footer .servicewrap .subinfo_left .call-center .consulting-time {
+  width: 200px;
+  padding: 8px 0 0;
+  font-size: 14px;
+  line-height: 22px;
+  color: #fff;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_left .corporate-gift {
+  padding: 33px 0 0;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_left .corporate-gift .gift-number {
+  font-size: 16px;
+  color: #fff;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_left .corporate-gift .email {
+  padding: 4px 0 2px;
+}
+#wrap #footer .footer .servicewrap .subinfo_left .corporate-gift .email a {
+  font-size: 14px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_left .f-sns-wrap {
+  width: 200px;
+  margin: 36px 0 0;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_left .f-sns-wrap .f-sns {
+  width: 205px;
+}
+#wrap #footer .footer .servicewrap .subinfo_left .f-sns-wrap .f-sns a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_left .f-sns-wrap .f-sns a img {
+  width: 100%;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_right {
+  width: 815px;
+  height: 320px;
+  float: right;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_right .f-menu {
+  width: 100%;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_right .f-menu li {
+  float: left;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_right .f-menu li a {
+  display: block;
+  margin: 0 40px 0 0;
+  color: #fff;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_right .newsletter {
+  width: 100%;
+  margin: 63px 0 0 0;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_right .newsletter {
+  width: 100%;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_right .newsletter ul {
+  width: 100%;
+}
+#wrap #footer .footer .servicewrap .subinfo_right .newsletter ul .email-sub {
+  width: 100%;
+}
+#wrap
+  #footer
+  .footer
+  .servicewrap
+  .subinfo_right
+  .newsletter
+  ul
+  .email-sub
+  input#receiveNewsEmail2[type="text"] {
+  width: 362px;
+  height: 40px;
+  padding: 12px 0 14px 20px;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_right .newsletter ul .email-sub .btnicon {
+  display: inline-block;
+  margin: 0 0 0 -4px;
+  cursor: pointer;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+  width: 110px;
+  height: 40px;
+  line-height: 38px;
+  border: 1px solid #fff;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_right .newsletter ul .news-ms {
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_right .newsletter ul .news-ms strong {
+  display: block;
+  margin: 0 0 2px;
+  font-weight: 300;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_right .newsletter ul .news-ms a {
+  display: inline-block;
+  margin: 0 0 0 10px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #fff;
+  border-bottom: 1px solid #b3ada5;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_right .copyright {
+  padding: 26px 0 0;
+  color: #9b9b9b;
+  line-height: 24px;
+}
+
+#wrap #footer .footer .servicewrap .subinfo_right .copyright .copy {
+  display: block;
+  font-size: 12px;
+  margin: 30px 0 0;
+}

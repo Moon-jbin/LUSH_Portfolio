@@ -1,0 +1,96 @@
+@charset "UTF-8";
+@import url("./reset.css");
+
+
+#wrap #main #m-section6 {
+  width: 100%;
+  display: none;
+}
+
+#wrap #main #m-section6 .container {
+  width: 100%;
+}
+
+#wrap #main #m-section6 .container .m-newsletter {
+  width: 100%;
+  display: block;
+  margin: 40px auto 10px;
+  text-align: center;
+  padding: 0 25px;
+}
+
+#wrap #main #m-section6 .container .m-newsletter > dt.news-notice {
+  width: 100%;
+  font-size: 17px;
+  margin: 0 0 20px 0;
+}
+#wrap #main #m-section6 .container .m-newsletter >  dd{
+  display: block;
+  width: 100%;
+  position: relative;
+}
+#wrap #main #m-section6 .container .m-newsletter >  dd:nth-child(1){
+  padding: 0 100px 0 0;
+}
+#wrap #main #m-section6 .container .m-newsletter >  dd:nth-child(2){
+  text-align: center;
+}
+#wrap #main #m-section6 .container .m-newsletter >  dd > input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #9a9a9a;
+  line-height: 28px;
+  padding: 0 0 0 10px;
+  outline: none;
+}
+#wrap #main #m-section6 .container .m-newsletter >  dd > button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 30px;
+  border: 1px solid #000;
+  background: #000;
+  color:#fff;
+  line-height: 28px;
+  font-size: 11px;
+}
+
+#wrap #main #m-section6 .container .m-newsletter >  dd > .news-btn {
+  display: inline-block;
+  margin: 10px 0 0;
+  font-size: 11px;
+  border-bottom: 1px solid #000;
+
+
+}
+
+
+#wrap #main #m-section6 .container .lush-labs {
+  text-align: center;
+  padding: 30px 0 0 0 ;
+  margin: 35px 35px 0;
+  border-top: 1px solid #e8e8e8;
+}
+
+#wrap #main #m-section6 .container .lush-labs > .title {
+  padding: 0 0 15px;
+}
+
+#wrap #main #m-section6 .container .lush-labs > .title > h3 {
+  font-size: 16px;
+}
+
+#wrap #main #m-section6 .container .lush-labs .lush-labs-img {
+  width: 120px;
+  margin : 0 auto;
+}
+
+#wrap #main #m-section6 .container .lush-labs .lush-labs-img > a {
+  display: block;
+  width: 100%;
+}
+#wrap #main #m-section6 .container .lush-labs .lush-labs-img > a > img{
+  display: block;
+  width: 120px;
+}

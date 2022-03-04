@@ -1,0 +1,73 @@
+@charset "UTF-8";
+@import url("./reset.css");
+
+#wrap #main #m-section5 {
+  width: 100%;
+  display: none;
+}
+
+#wrap #main #m-section5 .container {
+  width: 100%;
+}
+
+#wrap #main #m-section5 .container .title {
+  width: 100%;
+}
+
+#wrap #main #m-section5 .container .title > h3{
+  padding: 50px 0 0;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 900;
+}
+
+#wrap #main #m-section5 .container .lush-hash {
+  width: 100%;
+  padding: 5px 0;
+}
+
+#wrap #main #m-section5 .container .lush-hash > p {
+  display: block;
+  text-align: center;
+}
+
+#wrap #main #m-section5 .container .sns-wrap {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0 15px ;
+}
+
+#wrap #main #m-section5 .container .sns-wrap > li {
+  display: inline-block;
+  margin : 3px 10px;
+
+}
+
+#wrap #main #m-section5 .container .sns-wrap > li > a > img {
+  width: 20px;
+  height: 20px;
+}
+
+
+#wrap #main #m-section5 .container .youtube {
+  position: relative;
+}
+#wrap #main #m-section5 .container .youtube .youtube_area{
+  width: 100%;
+}
+#wrap #main #m-section5 .container .youtube .youtube_area #player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#wrap #main #m-section5 .container .youtube .youtube_area::before {
+  content:"";
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+}
+
+
